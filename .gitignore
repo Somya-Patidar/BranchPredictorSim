@@ -1,0 +1,26 @@
+# Build directories
+build/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Compiled binaries
+*.o
+*.out
+*.exe
+
+# IDE
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# Results
+results/csv/*.csv
+results/plots/*.png
+results/plots/*.pdf
