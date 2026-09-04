@@ -1,0 +1,39 @@
+BranchPredictorSim Benchmark Summary
+========================================
+
+Total Benchmark Runs: 42
+Unique Workloads: 7
+Predictors Evaluated: 6
+
+Average Results
+-------------------------
+Always Not Taken
+  Accuracy: 39.08%
+  MPKI:     609.24
+  IPC:      0.252
+
+Always Taken
+  Accuracy: 60.92%
+  MPKI:     390.76
+  IPC:      0.353
+
+GShare Predictor
+  Accuracy: 60.92%
+  MPKI:     390.76
+  IPC:      0.353
+
+One-Bit Predictor
+  Accuracy: 65.27%
+  MPKI:     347.28
+  IPC:      0.385
+
+Tournament Predictor
+  Accuracy: 65.45%
+  MPKI:     345.52
+  IPC:      0.387
+
+Two-Bit Saturating Predictor
+  Accuracy: 64.26%
+  MPKI:     357.43
+  IPC:      0.383
+

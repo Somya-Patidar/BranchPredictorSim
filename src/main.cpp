@@ -7,6 +7,7 @@
 #include "Tournament.h"
 #include "TraceReader.h"
 #include "TwoBit.h"
+#include "Benchmark.h"
 
 #include <iomanip>
 #include <iostream>
@@ -19,6 +20,9 @@ int main(int argc, char* argv[]) {
     if (!parseArguments(argc, argv, config))
         return 1;
 
+    if (config.benchmark)
+        return Benchmark::run(config) ? 0 : 1;
+    
     TraceReader reader;
 
     if (!reader.load(config.traceFile)) {

@@ -10,6 +10,7 @@ include_directories(include)
 add_executable(BranchPredictorSim
     src/main.cpp
     src/Config.cpp
+    src/Benchmark.cpp
     src/Metrics.cpp
     src/TraceReader.cpp
     src/Simulator.cpp

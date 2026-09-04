@@ -7,12 +7,13 @@ void printUsage() {
     std::cout
         << "BranchPredictorSim\n\n"
 
-        << "Usage:\n"
-
+        << "Single simulation:\n"
         << "  ./BranchPredictorSim <trace> <predictor> [options]\n\n"
 
-        << "Predictors:\n"
+        << "Benchmark suite:\n"
+        << "  ./BranchPredictorSim --benchmark\n\n"
 
+        << "Predictors:\n"
         << "  always-taken\n"
         << "  always-not-taken\n"
         << "  one-bit\n"
@@ -21,11 +22,9 @@ void printUsage() {
         << "  tournament\n\n"
 
         << "Options:\n"
-
-        << "  --table-size N      Prediction table size (default 1024)\n"
-        << "  --history-bits N    Global history bits (default 8)\n"
-        << "  --penalty N         Misprediction penalty (default 5)\n"
-        << "  --help              Show this message\n";
+        << "  --table-size N\n"
+        << "  --history-bits N\n"
+        << "  --penalty N\n";
 }
 
 bool parseArguments(int argc,
@@ -33,10 +32,10 @@ bool parseArguments(int argc,
                     Config& config) {
 
     if (argc == 2 &&
-        std::string(argv[1]) == "--help") {
+        std::string(argv[1]) == "--benchmark") {
 
-        printUsage();
-        return false;
+        config.benchmark = true;
+        return true;
     }
 
     if (argc < 3) {
