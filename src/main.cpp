@@ -1,5 +1,6 @@
 #include "AlwaysNotTaken.h"
 #include "AlwaysTaken.h"
+#include "OneBit.h"
 #include "Simulator.h"
 #include "TraceReader.h"
 
@@ -10,21 +11,45 @@
 
 static void printUsage() {
     std::cout << "Usage:\n";
-    std::cout << "  ./BranchScope <trace> <predictor>\n\n";
+    std::cout << "  ./BranchScope <trace> <predictor> [--table-size N]\n\n";
+
     std::cout << "Predictors:\n";
     std::cout << "  always-taken\n";
     std::cout << "  always-not-taken\n";
+    std::cout << "  one-bit\n";
 }
 
 int main(int argc, char* argv[]) {
 
-    if (argc != 3) {
+    if (argc < 3) {
         printUsage();
         return 1;
     }
 
     std::string traceFile = argv[1];
     std::string predictorName = argv[2];
+
+    uint32_t tableSize = 1024;
+
+    for (int i = 3; i < argc; ++i) {
+
+        std::string arg = argv[i];
+
+        if (arg == "--table-size") {
+
+            if (i + 1 >= argc) {
+                std::cerr << "Missing table size value.\n";
+                return 1;
+            }
+
+            tableSize = static_cast<uint32_t>(
+                std::stoul(argv[++i]));
+        }
+        else {
+            std::cerr << "Unknown option: " << arg << "\n";
+            return 1;
+        }
+    }
 
     TraceReader reader;
 
@@ -41,6 +66,9 @@ int main(int argc, char* argv[]) {
     else if (predictorName == "always-not-taken") {
         predictor = std::make_unique<AlwaysNotTaken>();
     }
+    else if (predictorName == "one-bit") {
+        predictor = std::make_unique<OneBit>(tableSize);
+    }
     else {
         std::cerr << "Unknown predictor: "
                   << predictorName << "\n";
@@ -55,6 +83,11 @@ int main(int argc, char* argv[]) {
     std::cout << "\n========== BranchScope ==========\n";
     std::cout << "Predictor           : "
               << predictor->name() << "\n";
+
+    if (predictorName == "one-bit")
+        std::cout << "Table Size          : "
+                  << tableSize << "\n";
+
     std::cout << "Branches            : "
               << metrics.totalBranches() << "\n";
     std::cout << "Correct             : "

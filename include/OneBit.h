@@ -1,21 +1,22 @@
-#ifndef ONE_BIT_H
-#define ONE_BIT_H
+#pragma once
 
 #include "Predictor.h"
+
+#include <cstdint>
 #include <vector>
 
 class OneBit : public Predictor {
-
-    std::vector<bool> table;
-    size_t mask;
-
 public:
-    explicit OneBit(size_t entries = 4096);
+    explicit OneBit(uint32_t tableSize = 1024);
 
     bool predict(uint64_t pc) override;
     void update(uint64_t pc, bool taken) override;
     void reset() override;
     std::string name() const override;
-};
 
-#endif
+private:
+    uint32_t index(uint64_t pc) const;
+
+    uint32_t tableSize;
+    std::vector<bool> predictionTable;
+};

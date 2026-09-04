@@ -14,4 +14,5 @@ add_executable(BranchPredictorSim
     src/Simulator.cpp
     src/AlwaysTaken.cpp
     src/AlwaysNotTaken.cpp
+    src/OneBit.cpp
 )
