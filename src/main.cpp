@@ -3,6 +3,7 @@
 #include "OneBit.h"
 #include "Simulator.h"
 #include "TraceReader.h"
+#include "TwoBit.h"
 
 #include <iomanip>
 #include <iostream>
@@ -17,6 +18,7 @@ static void printUsage() {
     std::cout << "  always-taken\n";
     std::cout << "  always-not-taken\n";
     std::cout << "  one-bit\n";
+    std::cout << "  two-bit\n";
 }
 
 int main(int argc, char* argv[]) {
@@ -69,6 +71,9 @@ int main(int argc, char* argv[]) {
     else if (predictorName == "one-bit") {
         predictor = std::make_unique<OneBit>(tableSize);
     }
+    else if (predictorName == "two-bit") {
+        predictor = std::make_unique<TwoBit>(tableSize);
+    }
     else {
         std::cerr << "Unknown predictor: "
                   << predictorName << "\n";
@@ -84,7 +89,7 @@ int main(int argc, char* argv[]) {
     std::cout << "Predictor           : "
               << predictor->name() << "\n";
 
-    if (predictorName == "one-bit")
+    if (predictorName == "one-bit" || predictorName == "two-bit")
         std::cout << "Table Size          : "
                   << tableSize << "\n";
 

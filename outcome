@@ -1,0 +1,149 @@
+Netid State   Recv-Q Send-Q                                          Local Address:Port       Peer Address:Port      Process
+u_str ESTAB   0      0                                                           * 8437                  * 383              
+u_dgr ESTAB   0      0                                                           * 3335                  * 6233             
+u_str ESTAB   0      0                                 /run/systemd/journal/stdout 136918                * 144324           
+u_str ESTAB   0      0                                                           * 8596                  * 8595             
+u_str ESTAB   0      0                                                           * 4452                  * 8396             
+u_str ESTAB   0      0                                 /run/dbus/system_bus_socket 11381                 * 4434             
+u_str ESTAB   0      0                                                           * 2680                  * 2681             
+u_str ESTAB   0      0                                                           * 28293                 * 28294            
+u_str ESTAB   0      0                                 /run/dbus/system_bus_socket 2008                  * 8466             
+u_str ESTAB   0      0                                                           * 2646                  * 10336            
+u_dgr ESTAB   0      0                                                           * 8312                  * 8313             
+u_str ESTAB   0      0                                                           * 28292                 * 28291            
+u_dgr ESTAB   0      0                                                           * 6216                  * 6215             
+u_str ESTAB   0      0                                 /run/dbus/system_bus_socket 2683                  * 6292             
+u_str ESTAB   0      0                                 /run/systemd/journal/stdout 1879                  * 9420             
+u_str ESTAB   0      0                                                           * 8592                  * 8591             
+u_str ESTAB   0      0                                                           * 7812                  * 7811             
+u_dgr ESTAB   0      0                                         /run/systemd/notify 6214                  * 0                
+u_str ESTAB   0      0                                                           * 2755                  * 2754             
+u_str ESTAB   0      0                                                           * 8587                  * 8586             
+u_dgr ESTAB   0      0                                /run/systemd/journal/dev-log 6231                  * 0                
+u_str ESTAB   0      0                                 /run/dbus/system_bus_socket 2684                  * 10323            
+u_dgr ESTAB   0      0                                 /run/systemd/journal/socket 6233                  * 0                
+u_str ESTAB   0      0                                                           * 3173                  * 3172             
+u_str ESTAB   0      0                                                           * 4471                  * 4472             
+u_str ESTAB   0      0                                                           * 28291                 * 28292            
+u_str ESTAB   0      0                                 /run/systemd/journal/stdout 3386                  * 5514             
+u_str ESTAB   0      0                                                           * 8590                  * 8589             
+u_str ESTAB   0      0                                                           * 8589                  * 8590             
+u_str ESTAB   0      0                                 /run/systemd/journal/stdout 10336                 * 2646             
+u_str ESTAB   0      0                                 /run/systemd/journal/stdout 2596                  * 9359             
+u_str ESTAB   0      0                                                           * 4472                  * 4471             
+u_str ESTAB   0      0                                                           * 9459                  * 9460             
+u_dgr ESTAB   0      0                                                           * 8314                  * 8315             
+u_dgr ESTAB   0      0                                                           * 2695                  * 6233             
+u_str ESTAB   0      0                                                           * 8594                  * 8593             
+u_str ESTAB   0      0                                                           * 8536                  * 8535             
+u_str ESTAB   0      0                                                           * 7811                  * 7812             
+u_str ESTAB   0      0                                 /run/systemd/journal/stdout 383                   * 8437             
+u_str ESTAB   0      0                                                           * 2681                  * 2680             
+u_str ESTAB   0      0                                                           * 28287                 * 28288            
+u_str ESTAB   0      0                                        /tmp/dbus-b2elZ9fq8w 4491                  * 5732             
+u_str ESTAB   0      0                                                           * 8595                  * 8596             
+u_dgr ESTAB   0      0                                                           * 3402                  * 6231             
+u_dgr ESTAB   0      0                                                           * 8446                  * 6231             
+u_dgr ESTAB   0      0                                                           * 5374                  * 6233             
+u_str ESTAB   0      0                                                           * 5732                  * 4491             
+u_str ESTAB   0      0                                                           * 8591                  * 8592             
+u_str ESTAB   0      0                                                           * 8535                  * 8536             
+u_dgr ESTAB   0      0                                                           * 6248                  * 6247             
+u_str ESTAB   0      0                                                           * 2756                  * 2757             
+u_str ESTAB   0      0                                                           * 8593                  * 8594             
+u_dgr ESTAB   0      0                                                           * 8451                  * 6233             
+u_str ESTAB   0      0                                           /tmp/.X11-unix/X0 12294                 * 5729             
+u_str ESTAB   0      0                                 /run/dbus/system_bus_socket 11411                 * 2707             
+u_dgr ESTAB   0      0                                                           * 8307                  * 6233             
+u_str ESTAB   0      0                                                           * 28289                 * 28290            
+u_str ESTAB   0      0                                 /run/systemd/journal/stdout 10328                 * 11373            
+u_str ESTAB   0      0                                                           * 9359                  * 2596             
+u_str ESTAB   0      0                                 /mnt/wslg/PulseAudioRDPSink 12296                 * 8543             
+u_str ESTAB   0      0                                                           * 28290                 * 28289            
+u_str ESTAB   0      0                                                           * 144324                * 136918           
+u_str ESTAB   0      0                                                           * 8586                  * 8587             
+u_dgr ESTAB   0      0                                                           * 296                   * 6214             
+u_str ESTAB   0      0                                 /run/dbus/system_bus_socket 8396                  * 4452             
+u_str ESTAB   0      0                                                           * 10358                 * 5517             
+u_dgr ESTAB   0      0                                                           * 6245                  * 6233             
+u_str ESTAB   0      0                                                           * 5729                  * 12294            
+u_str ESTAB   0      0                                                           * 8532                  * 0                
+u_str ESTAB   0      0                                                           * 2757                  * 2756             
+u_dgr ESTAB   0      0                                                           * 8463                  * 8464             
+u_dgr ESTAB   0      0                                                           * 8313                  * 8312             
+u_str ESTAB   0      0                                                           * 8543                  * 12296            
+u_str ESTAB   0      0                                                           * 8288                  * 317              
+u_dgr ESTAB   0      0                                                           * 6215                  * 6216             
+u_str ESTAB   0      0                                                           * 3172                  * 3173             
+u_str ESTAB   0      0                                                           * 28294                 * 28293            
+u_dgr ESTAB   0      0                                                           * 8464                  * 8463             
+u_dgr ESTAB   0      0                                                           * 8407                  * 6231             
+u_str ESTAB   0      0                                                           * 9460                  * 9459             
+u_str ESTAB   0      0                                                           * 11373                 * 10328            
+u_dgr ESTAB   0      0                                                           * 11375                 * 6231             
+u_dgr ESTAB   0      0                                                           * 9530                  * 6231             
+u_str ESTAB   0      0                                                           * 2754                  * 2755             
+u_str ESTAB   0      0                                 /run/systemd/journal/stdout 317                   * 8288             
+u_str ESTAB   0      0                                                           * 5514                  * 3386             
+u_str ESTAB   0      0                                 /run/systemd/journal/stdout 316                   * 3293             
+u_str ESTAB   0      0                                 /run/systemd/journal/stdout 5517                  * 10358            
+u_dgr ESTAB   0      0                                                           * 6247                  * 6248             
+u_str ESTAB   0      0                                                           * 9420                  * 1879             
+u_dgr ESTAB   0      0                                                           * 8315                  * 8314             
+u_str ESTAB   0      0                                                           * 3293                  * 316              
+u_str ESTAB   0      0                                                           * 28288                 * 28287            
+u_str ESTAB   0      0       @fd0835828480e6fa/bus/systemd-resolve/bus-api-resolve 10323                 * 2684             
+u_str ESTAB   0      0                @e5adfad9cecf4b1b/bus/systemd/bus-api-system 4434                  * 11381            
+u_str ESTAB   0      0                 @91e68e1725bb3065/bus/systemd-logind/system 2707                  * 11411            
+u_str ESTAB   0      0                    @9d6c0c400eaecb0b/bus/systemd/bus-system 8466                  * 2008             
+u_str ESTAB   0      0      @a8652fddf8085aa4/bus/systemd-timesyn/bus-api-timesync 6292                  * 2683             
+tcp   ESTAB   0      0                                                   127.0.0.1:39089         127.0.0.1:57710            
+tcp   ESTAB   0      0                                                   127.0.0.1:57710         127.0.0.1:39089            
+tcp   ESTAB   0      0                                                   127.0.0.1:39089         127.0.0.1:57724            
+tcp   ESTAB   0      0                                                   127.0.0.1:57724         127.0.0.1:39089            
+v_str ESTAB   0      0                                                           *:1787628532            2:50000            
+v_str ESTAB   0      0                                                           *:1787628533            2:50000            
+v_str ESTAB   0      0                                                           *:1787628534            2:50000            
+v_str ESTAB   0      0                                                           *:1787628535            2:50000            
+v_str ESTAB   0      0                                                           *:1787628536            2:50000            
+v_str ESTAB   0      0                                                           *:1787628538            2:50001            
+v_str ESTAB   0      0                                                           *:1787628539            2:50001            
+v_str ESTAB   0      0                                                           *:1787628540            2:50001            
+v_str ESTAB   0      0                                                           *:1787628542            2:50000            
+v_str ESTAB   0      0                                                           *:1787628543            2:50000            
+v_str ESTAB   0      0                                                           *:1787628544            2:50002            
+v_str ESTAB   0      0                                                           *:1787628545            2:50002            
+v_str ESTAB   0      0                                                           *:1787628547            2:50002            
+v_str ESTAB   0      0                                                           *:1787628548            2:50002            
+v_str ESTAB   0      0                                                           *:1                     2:1115051808       
+v_str ESTAB   0      0                                                           *:1787628541            2:1115051779       
+v_str ESTAB   0      0                                                           *:1787628546            2:1115051781       
+v_str ESTAB   0      0                                                           *:1787628550            2:1115051784       
+v_str ESTAB   0      0                                                           *:1787628554            2:1115051805       
+v_str ESTAB   0      0                                                           *:1787628554            2:1115051804       
+v_str ESTAB   0      0                                                           *:1787628554            2:1115051803       
+v_str CLOSING 0      0                                                           *:1787628554            2:1115051802       
+v_str ESTAB   0      0                                                           *:1787628552            2:1115051794       
+v_str ESTAB   0      0                                                           *:1787628553            2:1115051799       
+v_str ESTAB   0      0                                                           *:1787628553            2:1115051798       
+v_str ESTAB   0      0                                                           *:1787628553            2:1115051797       
+v_str ESTAB   0      0                                                           *:1787628553            2:1115051796       
+v_str ESTAB   0      0                                                           *:1787628553            2:1115051795       
+v_str ESTAB   0      0                                                           *:1787628562            2:1115051972       
+v_str ESTAB   0      0                                                           *:1787628562            2:1115051971       
+v_str ESTAB   0      0                                                           *:1787628562            2:1115051970       
+v_str ESTAB   0      0                                                           *:1787628562            2:1115051969       
+v_str ESTAB   0      0                                                           *:1787628562            2:1115051968       
+v_str ESTAB   0      0                                                           *:1787628563            2:1115051978       
+v_str ESTAB   0      0                                                           *:1787628561            2:1115051967       
+v_str ESTAB   0      0                                                           *:1787628566            2:1115051994       
+v_str ESTAB   0      0                                                           *:1787628566            2:1115051993       
+v_str ESTAB   0      0                                                           *:1787628566            2:1115051992       
+v_str ESTAB   0      0                                                           *:1787628566            2:1115051991       
+v_str ESTAB   0      0                                                           *:1787628566            2:1115051990       
+v_str ESTAB   0      0                                                           *:1787628564            2:1115051983       
+v_str ESTAB   0      0                                                           *:1787628564            2:1115051982       
+v_str ESTAB   0      0                                                           *:1787628564            2:1115051981       
+v_str ESTAB   0      0                                                           *:1787628564            2:1115051980       
+v_str ESTAB   0      0                                                           *:1787628564            2:1115051979       
+v_str ESTAB   0      0                                                           *:1787628565            2:1115051989       
