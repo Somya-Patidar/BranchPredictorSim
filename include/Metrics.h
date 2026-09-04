@@ -1,22 +1,27 @@
-#ifndef METRICS_H
-#define METRICS_H
+#pragma once
 
 #include <cstdint>
 
-struct Metrics{
+class Metrics {
+public:
+    Metrics(uint32_t mispredictionPenalty = 5);
 
-    uint64_t branches=0;
+    void recordPrediction(bool predicted, bool actual);
 
-    uint64_t correct=0;
-
-    uint64_t incorrect=0;
+    uint64_t totalBranches() const;
+    uint64_t correctPredictions() const;
+    uint64_t incorrectPredictions() const;
 
     double accuracy() const;
-
     double mpki() const;
+    double ipc() const;
 
-    double ipc(int penalty=5) const;
+    void reset();
 
+private:
+    uint64_t total;
+    uint64_t correct;
+    uint64_t incorrect;
+
+    uint32_t penalty;
 };
-
-#endif

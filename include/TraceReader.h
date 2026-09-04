@@ -1,18 +1,20 @@
-#ifndef TRACE_READER_H
-#define TRACE_READER_H
+#pragma once
 
-#include <vector>
-#include <string>
 #include <cstdint>
+#include <string>
+#include <vector>
 
-struct Branch{
+struct Branch {
     uint64_t pc;
     bool taken;
 };
 
-class TraceReader{
+class TraceReader {
 public:
-    static std::vector<Branch> read(const std::string& path);
-};
+    bool load(const std::string& filename);
 
-#endif
+    const std::vector<Branch>& branches() const;
+
+private:
+    std::vector<Branch> trace;
+};

@@ -1,25 +1,61 @@
 #include "Metrics.h"
 
-double Metrics::accuracy() const{
+Metrics::Metrics(uint32_t mispredictionPenalty)
+    : total(0),
+      correct(0),
+      incorrect(0),
+      penalty(mispredictionPenalty) {}
 
-    if(branches==0) return 0;
+void Metrics::recordPrediction(bool predicted, bool actual) {
+    total++;
 
-    return 100.0*correct/branches;
-
+    if (predicted == actual)
+        correct++;
+    else
+        incorrect++;
 }
 
-double Metrics::mpki() const{
-
-    if(branches==0) return 0;
-
-    return 1000.0*incorrect/branches;
-
+uint64_t Metrics::totalBranches() const {
+    return total;
 }
 
-double Metrics::ipc(int penalty) const{
+uint64_t Metrics::correctPredictions() const {
+    return correct;
+}
 
-    if(branches==0) return 0;
+uint64_t Metrics::incorrectPredictions() const {
+    return incorrect;
+}
 
-    return branches/(double)(branches+incorrect*penalty);
+double Metrics::accuracy() const {
+    if (total == 0)
+        return 0.0;
 
+    return static_cast<double>(correct) * 100.0 /
+           static_cast<double>(total);
+}
+
+double Metrics::mpki() const {
+    if (total == 0)
+        return 0.0;
+
+    return static_cast<double>(incorrect) * 1000.0 /
+           static_cast<double>(total);
+}
+
+double Metrics::ipc() const {
+    if (total == 0)
+        return 0.0;
+
+    double cycles =
+        static_cast<double>(total) +
+        static_cast<double>(incorrect * penalty);
+
+    return static_cast<double>(total) / cycles;
+}
+
+void Metrics::reset() {
+    total = 0;
+    correct = 0;
+    incorrect = 0;
 }
