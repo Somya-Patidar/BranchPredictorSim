@@ -5,6 +5,7 @@
 #include "TraceReader.h"
 #include "TwoBit.h"
 #include "GShare.h"
+#include "Tournament.h"
 
 #include <iomanip>
 #include <iostream>
@@ -23,6 +24,7 @@ static void printUsage() {
     std::cout << "  one-bit\n";
     std::cout << "  two-bit\n";
     std::cout << "  gshare\n";
+    std::cout << "  tournament\n";
 }
 
 int main(int argc, char* argv[]) {
@@ -91,6 +93,11 @@ int main(int argc, char* argv[]) {
             std::make_unique<GShare>(tableSize,
                                     historyBits);
     }
+    else if (predictorName == "tournament") {
+        predictor = std::make_unique<Tournament>(
+            tableSize,
+            historyBits);
+    }
     else {
         std::cerr << "Unknown predictor: "
                   << predictorName << "\n";
@@ -102,11 +109,11 @@ int main(int argc, char* argv[]) {
 
     Metrics metrics = simulator.run(*predictor, reader);
 
-    std::cout << "\n========== BranchScope ==========\n";
+    std::cout << "\n========== BranchPredictorSim ==========\n";
     std::cout << "Predictor           : "
               << predictor->name() << "\n";
 
-    if (predictorName == "one-bit" || predictorName == "two-bit" || predictorName == "gshare")
+    if (predictorName == "one-bit" || predictorName == "two-bit" || predictorName == "gshare" || predictorName == "tournament")
         std::cout << "Table Size          : "
                   << tableSize << "\n";
 

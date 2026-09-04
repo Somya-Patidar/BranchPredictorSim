@@ -17,4 +17,5 @@ add_executable(BranchPredictorSim
     src/OneBit.cpp
     src/TwoBit.cpp
     src/GShare.cpp
+    src/Tournament.cpp
 )

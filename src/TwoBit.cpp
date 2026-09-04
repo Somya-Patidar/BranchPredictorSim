@@ -10,8 +10,12 @@ uint32_t TwoBit::index(uint64_t pc) const {
     return static_cast<uint32_t>(pc % tableSize);
 }
 
-bool TwoBit::predict(uint64_t pc) {
+bool TwoBit::peekPredict(uint64_t pc) const {
     return counterTable[index(pc)] >= 2;
+}
+
+bool TwoBit::predict(uint64_t pc) {
+    return peekPredict(pc);
 }
 
 void TwoBit::update(uint64_t pc, bool taken) {

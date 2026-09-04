@@ -18,9 +18,12 @@ uint32_t GShare::index(uint64_t pc) const {
     return (pcIndex ^ ghr) % tableSize;
 }
 
-bool GShare::predict(uint64_t pc) {
-
+bool GShare::peekPredict(uint64_t pc) const {
     return counterTable[index(pc)] >= 2;
+}
+
+bool GShare::predict(uint64_t pc) {
+    return peekPredict(pc);
 }
 
 void GShare::update(uint64_t pc, bool taken) {
