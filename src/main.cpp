@@ -4,6 +4,7 @@
 #include "Simulator.h"
 #include "TraceReader.h"
 #include "TwoBit.h"
+#include "GShare.h"
 
 #include <iomanip>
 #include <iostream>
@@ -12,13 +13,16 @@
 
 static void printUsage() {
     std::cout << "Usage:\n";
-    std::cout << "  ./BranchScope <trace> <predictor> [--table-size N]\n\n";
+    std::cout << "  ./BranchPredictorSim <trace> <predictor>";
+    std::cout << " [--table-size N]";
+    std::cout << " [--history-bits N]\n\n";
 
     std::cout << "Predictors:\n";
     std::cout << "  always-taken\n";
     std::cout << "  always-not-taken\n";
     std::cout << "  one-bit\n";
     std::cout << "  two-bit\n";
+    std::cout << "  gshare\n";
 }
 
 int main(int argc, char* argv[]) {
@@ -32,6 +36,7 @@ int main(int argc, char* argv[]) {
     std::string predictorName = argv[2];
 
     uint32_t tableSize = 1024;
+    uint32_t historyBits = 8;
 
     for (int i = 3; i < argc; ++i) {
 
@@ -46,6 +51,13 @@ int main(int argc, char* argv[]) {
 
             tableSize = static_cast<uint32_t>(
                 std::stoul(argv[++i]));
+        }
+        else if (arg == "--history-bits") {
+            if (i + 1 >= argc) {
+                std::cerr << "Missing history length.\n";
+                return 1;
+            }
+            historyBits =static_cast<uint32_t>(std::stoul(argv[++i]));
         }
         else {
             std::cerr << "Unknown option: " << arg << "\n";
@@ -74,6 +86,11 @@ int main(int argc, char* argv[]) {
     else if (predictorName == "two-bit") {
         predictor = std::make_unique<TwoBit>(tableSize);
     }
+    else if (predictorName == "gshare") {
+        predictor =
+            std::make_unique<GShare>(tableSize,
+                                    historyBits);
+    }
     else {
         std::cerr << "Unknown predictor: "
                   << predictorName << "\n";
@@ -89,10 +106,14 @@ int main(int argc, char* argv[]) {
     std::cout << "Predictor           : "
               << predictor->name() << "\n";
 
-    if (predictorName == "one-bit" || predictorName == "two-bit")
+    if (predictorName == "one-bit" || predictorName == "two-bit" || predictorName == "gshare")
         std::cout << "Table Size          : "
                   << tableSize << "\n";
 
+    if (predictorName == "gshare") {
+        std::cout << "History Bits        : "
+                << historyBits << "\n";
+    }
     std::cout << "Branches            : "
               << metrics.totalBranches() << "\n";
     std::cout << "Correct             : "

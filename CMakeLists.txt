@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(include)
 
-add_executable(BranchScope
+add_executable(BranchPredictorSim
     src/main.cpp
     src/Metrics.cpp
     src/TraceReader.cpp
@@ -16,4 +16,5 @@ add_executable(BranchScope
     src/AlwaysNotTaken.cpp
     src/OneBit.cpp
     src/TwoBit.cpp
+    src/GShare.cpp
 )
