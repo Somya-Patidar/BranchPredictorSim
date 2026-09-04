@@ -1,16 +1,11 @@
-#ifndef ALWAYS_NOT_TAKEN_H
-#define ALWAYS_NOT_TAKEN_H
+#pragma once
 
 #include "Predictor.h"
 
-class AlwaysNotTaken:public Predictor{
-
+class AlwaysNotTaken : public Predictor {
 public:
-
-    bool predict(uint64_t) override;
-    void update(uint64_t,bool) override;
+    bool predict(uint64_t pc) override;
+    void update(uint64_t pc, bool taken) override;
     void reset() override;
     std::string name() const override;
 };
-
-#endif

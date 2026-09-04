@@ -12,4 +12,6 @@ add_executable(BranchPredictorSim
     src/Metrics.cpp
     src/TraceReader.cpp
     src/Simulator.cpp
+    src/AlwaysTaken.cpp
+    src/AlwaysNotTaken.cpp
 )
